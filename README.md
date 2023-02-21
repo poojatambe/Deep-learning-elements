@@ -43,4 +43,20 @@ Transpose Convolution with stride 2=   tensor([[[[1., 0., 2., 0.],
 
 Transpose convolution has trainable parameters.
 
-Transpose= convolution + Upssample
+Transpose= convolution + Upsample
+
+
+**1 X 1 Convolution**
+
+As we increase layers in deep neural network, width, height and depth of feature map increases. The pooling layer downsamples feature maps by reducing width and height. The depth of feature map indicates number of feature maps which is reduced using 1 x 1 convolution layer.
+
+In convolution,
+
+* Each filter creates one feature map.
+* Filter has same depth or number of channels as input.
+
+1 x 1 convolution layer is called channelwise pooling. It is used for **projecting feature map** when number of filters are same as depth of previous layer, **reducing no of feature map** when number of filters are less than previous layer depth, and **increasing no of feature maps** when number of filters are more than previous layer.
+
+![image](https://user-images.githubusercontent.com/64680838/220333299-2de9d042-3856-4081-82de-c4000606cad2.png)
+
+
